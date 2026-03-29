@@ -20,7 +20,7 @@ CREATE TABLE Reserva (
    id_reserva INT PRIMARY KEY AUTO_INCREMENT,
    fecha_reserva DATE NOT NULL,
    id_pago INT NOT NULL,
-   FOREIGN KEY (id_pago), REFERENCES Pago(id_pago)
+   FOREIGN KEY (id_pago) REFERENCES Pago(id_pago)
 );
 
 CREATE TABLE Evento (
@@ -30,5 +30,5 @@ CREATE TABLE Evento (
    tipo VARCHAR(50) NOT NULL,
    limpieza BOOLEAN NOT NULL,
    id_reserva INT UNIQUE NOT NULL,
-   FOREIGN KEY (id_reserva), REFERENCES Reserva(id_reserva)
+   FOREIGN KEY (id_reserva) REFERENCES Reserva(id_reserva)
 );

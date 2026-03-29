@@ -11,9 +11,10 @@ CREATE TABLE Cliente (
 CREATE TABLE Pago (
     id_pago INT PRIMARY KEY AUTO_INCREMENT,
     importe DECIMAL(10,2) NOT NULL,
-    estado VARCHAR(50) NOT NULL,
+    estado ENUM('pagado', 'pendiente', 'cancelado') DEFAULT 'pendiente' NOT NULL,
     id_cliente INT NOT NULL,
     FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente)
+        ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 CREATE TABLE Reserva (
@@ -21,14 +22,16 @@ CREATE TABLE Reserva (
    fecha_reserva DATE NOT NULL,
    id_pago INT NOT NULL,
    FOREIGN KEY (id_pago) REFERENCES Pago(id_pago)
+    ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 CREATE TABLE Evento (
    id_evento INT PRIMARY KEY AUTO_INCREMENT,
    fecha_evento DATE NOT NULL,
-   turno VARCHAR(50) NOT NULL,
+   turno ENUM('mañana', 'tarde', 'noche') NOT NULL,
    tipo VARCHAR(50) NOT NULL,
    limpieza BOOLEAN NOT NULL,
    id_reserva INT UNIQUE NOT NULL,
    FOREIGN KEY (id_reserva) REFERENCES Reserva(id_reserva)
+    ON DELETE SET NULL ON UPDATE CASCADE
 );

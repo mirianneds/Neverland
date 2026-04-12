@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
+:root {
+    --blue: #4A90E2;
+    --purple: #c0bdeeec;
+    --pink: #FDA7DF;
+    --yellow: #FFD32A;
+    --white: #FFFFFF;
+    --bg-soft: #F0F4F8;
+    --text: #4A3F6B;
+    --text2: #7A6FA0;
+    --shadow: 0 14px 30px rgba(0, 0, 0, .35);
+    --r: 18px;
+    /* Añadimos los colores del degradado como variables para que sea más fácil de editar */
+    --gradient: linear-gradient(135deg, #FFB5C8, #C9B8F0, #A8D8F0, #B8F0D8);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:'Quicksand', sans-serif;
+    color: var(--text);
+    background-color: var(--bg-soft);
+}
+
+/* CORRECCIÓN 1: En tu código original decía 'Nunito', pero no la importaste. 
+   He cambiado a 'Fredoka' que sí está en tu @import.
+   CORRECCIÓN 2: El font-weight máximo es 900 o 1000. 2000 no existe.
+*/
+h1, h2, h3, .nav a, .btn-primary {
+    font-family: 'Nunito', Arial, sans-serif; /* Se añadió sans-serif y se corrigió la coma suelta */
+    letter-spacing: 0.5px;
+    font-weight: bold; /* Valor corregido de 2000 a 700 */
+    text-transform: uppercase;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(01px);
+    -webkit-backdrop-filter: blur(01px);
+    padding: 7px 20px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* CORRECCIÓN: 300px de gap es demasiado, suele romper el diseño en pantallas normales. He bajado a 30px. */
+}
+
+.brand__logo {
+    width: 150px;
+    height: auto; /* Cambiado de 100px a auto para no deformar el logo */
+    opacity: 0;
+    /* Usamos ease-out para que empiece rápido y frene suavemente al final */
+    animation: birthSmooth 0.6s ease-out forwards;
+    animation-delay: 0.2s;
+    transform-origin: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav a {
+    padding: 10px 16px;
+    border-radius: 999px;
+    color: var(--text2);
+    font-weight: bold;
+    background: transparent;
+    transition: all 0.3s ease; /* Reducido de 0.75s para que se sienta más reactivo */
+}
+
+.nav a:hover,
+.nav a.active {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    background: var(--gradient);
+    color: #FFFFFF;
+}
+
+.hero {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, 
+            rgba(255, 255, 255, 0.8) 2%, 
+            rgba(255, 255, 255, 0) 30%), url("img/Foto_Fachada.png"); 
+    background-size: cover;
+    background-position: center;
+}
+
+/* El pseudo-elemento para el blur de fondo está perfecto */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px; /* Ajusta la altura de la transición */
+  /* Degradado que sale desde el blanco/transparente del nav */
+  background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, transparent 100%);
+  z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content > * {
+    opacity: 0; /* Empiezan invisibles */
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-content h1 {
+    margin-bottom: 5px; /* Reduce el espacio debajo de "BIENVENIDO A" */
+    font-size: 1.5rem;   /* Un poco más pequeño para laptops */
+    animation-delay: 0.2s
+}
+
+.hero-content img { 
+    opacity: 0;
+   animation-delay: 0.4s; 
+    max-width: 80%; /* Sugerencia para que no se vea gigante en el portátil */
+    height: auto;
+}
+
+.hero-content h2 {
+
+    font-size: 1.5rem;   /* Un poco más pequeño para laptops */
+    font-weight: 400;
+    text-transform: none;
+    animation-delay: 0.6s;
+}
+
+.hero-content p {
+    animation-delay: 0.6s
+}    
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px; /* Invertido: más ancho que alto para que parezca un botón real */
+    border-radius: 999px;
+    background: var(--gradient);
+    color: white;
+    transition: all 0.3s ease;
+    animation-delay: 0.8s;
+}
+
+.btn-primary span {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes birth {
+    0% {
+        opacity: 0;
+        transform: scale(0.3); /* Empieza muy pequeñito */
+    }
+    70% {
+        transform: scale(1.1); /* Crece un poquito más de su tamaño (efecto rebote) */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Se queda en su tamaño original */
+    }
+}
+
+@keyframes birthSmooth {
+    from {
+        opacity: 0;
+        transform: scale(0); /* Empieza desde la nada absoluta */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Termina en su tamaño original sin pasarse */
+    }
+}

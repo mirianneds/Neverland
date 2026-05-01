@@ -25,7 +25,11 @@ body {
     background-color: var(--bg-soft);
 }
 
-h1, h2, h3, .nav a, .btn-primary {
+h1,
+h2,
+h3,
+.nav a,
+.btn-primary {
     font-family: 'Nunito', Arial, sans-serif;
     letter-spacing: 0.5px;
     font-weight: bold;
@@ -36,7 +40,18 @@ a {
     text-decoration: none;
 }
 
-.topbar {
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.header {
     position: sticky;
     top: 0;
     z-index: 100;
@@ -51,7 +66,7 @@ a {
     gap: 30px;
 }
 
-.brand__logo {
+.header-logo {
     width: 150px;
     height: auto;
     opacity: 0;
@@ -89,7 +104,7 @@ a {
     justify-content: center;
     text-align: center;
     padding: 30px 20px;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 2%, rgba(255, 255, 255, 0) 30%), url("img/Foto_Fachada.png"); 
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 2%, rgba(255, 255, 255, 0) 30%), url("img/Foto_Fachada.png");
     background-size: cover;
     background-position: center;
 }
@@ -111,7 +126,7 @@ a {
     left: 0;
     width: 100%;
     height: 120px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, transparent 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, transparent 100%);
     z-index: 1;
 }
 
@@ -120,7 +135,7 @@ a {
     z-index: 2;
 }
 
-.hero-content > * {
+.hero-content>* {
     opacity: 0;
     animation: fadeInUp 0.8s ease-out forwards;
 }
@@ -131,8 +146,8 @@ a {
     animation-delay: 0.2s;
 }
 
-.hero-content img { 
-    animation-delay: 0.4s; 
+.hero-content img {
+    animation-delay: 0.4s;
     max-width: 80%;
     height: auto;
 }
@@ -145,7 +160,7 @@ a {
 
 .hero-content p {
     animation-delay: 0.6s;
-}    
+}
 
 .btn-primary {
     display: inline-block;
@@ -162,7 +177,7 @@ a {
     font-size: 24px;
     font-weight: 700;
     color: var(--white);
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary:hover {
@@ -170,7 +185,7 @@ a {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.content-container {
+.section-intro {
     max-width: 100%;
     margin: 0;
     padding: 50px 20px 120px;
@@ -178,7 +193,7 @@ a {
     text-align: center;
 }
 
-.content-container h2 {
+.section-intro h2 {
     color: var(--text);
     font-size: 2.2rem;
     margin-bottom: 40px;
@@ -186,7 +201,7 @@ a {
     display: inline-block;
 }
 
-.content-container h2::after {
+.section-intro h2::after {
     content: "";
     position: absolute;
     bottom: -15px;
@@ -197,7 +212,7 @@ a {
     border-radius: 50px;
 }
 
-.content-container p {
+.section-intro p {
     color: var(--text);
     font-size: 1.5rem;
     line-height: 1.8;
@@ -209,10 +224,10 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    padding: 100px 20px 80px 20px; 
+    padding: 100px 20px 80px 20px;
     background: linear-gradient(to bottom, var(--purple) 0%, var(--purple) 60%, var(--white) 100%);
-    margin-top: -105px; 
-    border-top: 1px solid var(--purple); 
+    margin-top: -105px;
+    border-top: 1px solid var(--purple);
     position: relative;
     z-index: 10;
 }
@@ -222,7 +237,7 @@ a {
     padding: 30px;
     width: 320px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(74, 63, 107, 0.08); 
+    box-shadow: 0 10px 25px rgba(74, 63, 107, 0.08);
     border: 4px solid transparent;
     background-image: linear-gradient(white, white), var(--gradient);
     background-origin: border-box;
@@ -258,12 +273,12 @@ a {
     line-height: 1.6;
 }
 
-section.cards + section {
+section.cards+section {
     padding-top: 80px;
     background-color: var(--white);
 }
 
-section > article {
+section>article {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -274,8 +289,8 @@ section > article {
     width: 100%;
 }
 
-section > article.cumpleaños {
-    margin-top: 20px; 
+section>article.birthday-section {
+    margin-top: 20px;
 }
 
 .article-text {
@@ -295,11 +310,12 @@ section > article.cumpleaños {
     color: var(--text2);
 }
 
-section > article:nth-child(even) {
+section>article:nth-child(even) {
     flex-direction: row-reverse;
 }
 
-.cumpleaños img, .talleres img {
+.birthday-section img,
+.workshops img {
     width: 500px;
     height: auto;
     border-radius: 30px;
@@ -308,31 +324,26 @@ section > article:nth-child(even) {
 
 .services {
     background: linear-gradient(to bottom, var(--white) 0%, var(--white) 60%, var(--purple) 100%);
-    padding: 100px 0 50px 0; 
+    padding: 100px 0 50px 0;
     width: 100%;
 }
 
-.galery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
-    gap: 0 20px;
-    padding: 10px 5vw; 
-    width: 100%;
+.gallery-section {
     background: var(--purple);
+    width: 100%;
 }
 
-.galery-title {
+.gallery-title {
     text-align: center;
     font-size: 2.2rem;
-    background: var(--purple);
     margin: 0;
     padding: 40px 20px;
-    position: relative; 
-    display: block; 
+    position: relative;
+    display: block;
     color: var(--text);
 }
 
-.galery-title::after {
+.gallery-title::after {
     content: "";
     position: absolute;
     bottom: 25px;
@@ -344,23 +355,31 @@ section > article:nth-child(even) {
     border-radius: 50px;
 }
 
-.galery article {
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 0 20px;
+    padding: 10px 5vw;
+    width: 100%;
+}
+
+.gallery article {
     background: var(--white);
     padding: 5px;
     border-radius: 25px;
     box-shadow: var(--shadow);
-    height: 350px; 
-    cursor: default; 
-    transition: box-shadow 0.3s ease; 
+    height: 350px;
+    cursor: default;
+    transition: box-shadow 0.3s ease;
     position: relative;
     z-index: 1;
 }
 
-.galery img {
+.gallery img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 18px; 
+    border-radius: 18px;
     display: block;
 }
 
@@ -384,7 +403,7 @@ section > article:nth-child(even) {
     margin-bottom: 10px;
 }
 
-.footer-column h3 {
+.footer-schedule h3 {
     font-size: 1.1rem;
     margin-bottom: 20px;
     color: var(--blue);
@@ -433,7 +452,34 @@ section > article:nth-child(even) {
     transform: translateY(-3px);
 }
 
-/* --- Estilos específicos para la página de Reserva --- */
+.price-card dl {
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+.price-card dt {
+    font-size: 0.9rem;
+    color: var(--text2);
+    margin-top: 10px;
+}
+
+.price-card dd {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--text);
+    margin: 0;
+}
+
+.price-time {
+    font-size: 1rem;
+    color: var(--text2);
+    margin: 5px 0 10px;
+    text-align: center;
+}
+
+.price-note {
+    font-size: 1.1rem;
+}
 
 .booking-section {
     padding: 40px 20px 80px;
@@ -475,7 +521,6 @@ section > article:nth-child(even) {
     padding: 40px;
     border-radius: var(--r);
     box-shadow: var(--shadow);
-    /* Borde degradado como tus cards */
     border: 4px solid transparent;
     background-image: linear-gradient(white, white), var(--gradient);
     background-origin: border-box;
@@ -493,8 +538,8 @@ section > article:nth-child(even) {
     color: var(--text);
 }
 
-.form-group input, 
-.form-group select, 
+.form-group input,
+.form-group select,
 .form-group textarea {
     width: 100%;
     padding: 12px;
@@ -516,28 +561,15 @@ section > article:nth-child(even) {
     cursor: pointer;
 }
 
-/* --- Estilos Contacto (Sin Cards) --- */
-
-/* ================================================= */
-/* ESTILOS PARA PÁGINA DE CONTACTO          */
-/* ================================================= */
-
-/* 1. Contenedor del Gradiente (El "puente" visual) */
-.gradient-bridge {
-    /* Crea la transición desde el morado de la sección superior hacia el blanco */
-    background: linear-gradient(to bottom, 
-        var(--purple) 0%, 
-        var(--purple) 50%, 
-        var(--bg-soft) 100%
-    );
+.contact-section {
+    background: linear-gradient(to bottom, var(--purple) 0%, var(--purple) 50%, var(--bg-soft) 100%);
     padding: 20px 20px 100px;
-    margin-top: -105px; /* Sube el bloque para pisar el contenido superior */
+    margin-top: -105px;
     position: relative;
     z-index: 10;
 }
 
-/* 2. Bloque Principal de Contacto */
-.contact-simple-layout {
+.contact-layout {
     display: flex;
     flex-wrap: wrap;
     max-width: 1100px;
@@ -546,15 +578,12 @@ section > article:nth-child(even) {
     border-radius: var(--r);
     overflow: hidden;
     box-shadow: var(--shadow);
-    
-    /* Borde con el gradiente arcoíris de Neverland */
     border: 4px solid transparent;
     background-image: linear-gradient(white, white), var(--gradient);
     background-origin: border-box;
     background-clip: padding-box, border-box;
 }
 
-/* 3. Columna de Detalles (Texto e Iconos) */
 .contact-details {
     flex: 1;
     padding: 50px;
@@ -566,7 +595,7 @@ section > article:nth-child(even) {
 
 .contact-row {
     display: flex;
-    align-items: center; /* Centra el icono con el texto */
+    align-items: center;
     gap: 20px;
 }
 
@@ -581,7 +610,7 @@ section > article:nth-child(even) {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0; /* Evita que el círculo se deforme */
+    flex-shrink: 0;
 }
 
 .text-group h3 {
@@ -598,18 +627,56 @@ section > article:nth-child(even) {
     line-height: 1.4;
 }
 
-/* 4. Columna del Mapa */
-.map-full {
+.map-container {
     flex: 1;
     min-width: 400px;
     min-height: 450px;
-    background: #f0f0f0; /* Color de carga */
+    background: #f0f0f0;
 }
 
-/* 5. Ajustes para Dispositivos Móviles */
 @media (max-width: 768px) {
-    .gradient-bridge {
-        margin-top: -60px; /* Menos margen en móvil para que no suba tanto */
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav {
+        gap: 5px;
+        font-size: 0.8rem;
+    }
+
+    .nav a {
+        padding: 8px 12px;
+    }
+
+    section>article {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .article-text h3 {
+        font-size: 2rem;
+    }
+
+    .birthday-section img,
+    .workshops img {
+        width: 100%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-info {
+        order: 2;
+    }
+
+    .contact-section {
+        margin-top: -60px;
         padding-bottom: 40px;
     }
 
@@ -617,9 +684,9 @@ section > article:nth-child(even) {
         padding: 30px 20px;
     }
 
-    .map-full {
+    .map-container {
         min-width: 100%;
-        height: 300px; /* Mapa más pequeño en móvil */
+        height: 300px;
     }
 
     .contact-row i {
@@ -629,61 +696,12 @@ section > article:nth-child(even) {
     }
 }
 
-
-/* Ajustes para móviles */
-@media (max-width: 768px) {
-    .contact-details {
-        padding: 30px;
-    }
-    
-    .map-full {
-        min-width: 100%;
-        height: 300px;
-    }
-}
-
-/* Adaptación para móviles */
-@media (max-width: 768px) {
-    .booking-wrapper {
-        grid-template-columns: 1fr;
-    }
-    .booking-info {
-        order: 2; /* Pone la info debajo del formulario en móviles */
-    }
-}
-
-@media (max-width: 768px) {
-    .topbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .nav {
-        gap: 5px;
-        font-size: 0.8rem;
-    }
-    .nav a {
-        padding: 8px 12px;
-    }
-    section > article {
-        flex-direction: column !important;
-        text-align: center;
-    }
-    .article-text h3 {
-        font-size: 2rem;
-    }
-    .cumpleaños img, .talleres img {
-        width: 100%;
-    }
-    .galery {
-        grid-template-columns: 1fr;
-    }
-}
-
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(25px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -695,6 +713,7 @@ section > article:nth-child(even) {
         opacity: 0;
         transform: scale(0);
     }
+
     to {
         opacity: 1;
         transform: scale(1);

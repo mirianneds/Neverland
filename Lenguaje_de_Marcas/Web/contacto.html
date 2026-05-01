@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <header class="topbar">
-        <div class="brand">
-            <img class="brand__logo" src="img/Neverland_SinFondo.png" alt="Neverland Logo" />
+    <header class="header">
+        <div class="header-brand">
+            <img class="header-logo" src="img/Neverland_SinFondo.png" alt="Neverland Logo" />
         </div>
         <nav class="nav">
             <a href="index.html">Inicio</a>
@@ -23,13 +23,13 @@
     </header>
 
     <main>
-        <section class="content-container">
+        <section class="section-intro">
             <h2>Contacta con Nosotros</h2>
             <p>Estamos en el corazón de Zaragoza, listos para ayudarte.</p>
         </section>
 
-        <div class="gradient-bridge">
-            <section class="contact-simple-layout">
+        <section class="contact-section">
+            <div class="contact-layout">
                 <div class="contact-details">
                     <div class="contact-row">
                         <i class="fa-solid fa-location-dot"></i>
@@ -38,7 +38,6 @@
                             <p>C/ de la Vía Universitaria, 10, 50009 Zaragoza</p>
                         </div>
                     </div>
-
                     <div class="contact-row">
                         <i class="fa-solid fa-phone"></i>
                         <div class="text-group">
@@ -46,7 +45,6 @@
                             <p>630 580 676</p>
                         </div>
                     </div>
-
                     <div class="contact-row">
                         <i class="fa-solid fa-envelope"></i>
                         <div class="text-group">
@@ -56,25 +54,25 @@
                     </div>
                 </div>
 
-                <div class="map-full">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2982.123456789!2d-0.9034567!3d41.6345678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd596b1234567890%3A0x1234567890abcdef!2zQy4gZGUgbGEgVsOtYSBVbml2ZXJzaXRhcmlhLCAxMCwgNTAwMDkgWmFyYWdvemE!5e0!3m2!1ses!2ses!4v1234567890123" 
+                <div class="map-container">
+                    <iframe
+                        title="Mapa de ubicación de Neverland"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2982.123456789!2d-0.9034567!3d41.6345678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd596b1234567890%3A0x1234567890abcdef!2zQy4gZGUgbGEgVsOtYSBVbml2ZXJzaXRhcmlhLCAxMCwgNTAwMDkgWmFyYWdvemE!5e0!3m2!1ses!2ses!4v1234567890123"
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
                     </iframe>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
     <footer class="main-footer">
         <div class="footer-top">
-            <div class="footer-column brand-info">
+            <div class="footer-column footer-brand">
                 <img src="img/Neverland_SinFondo.png" alt="Neverland Logo" class="footer-logo">
                 <p>C/ de la Vía Universitaria, 10<br>50009 Zaragoza</p>
-                <p class="phone">630 580 676</p>
+                <p class="footer-phone">630 580 676</p>
             </div>
-
-            <div class="footer-column schedule">
+            <div class="footer-column footer-schedule">
                 <h3>HORARIO</h3>
                 <ul>
                     <li>Mañanas: 10:30 a 15:00</li>
@@ -83,25 +81,23 @@
                 </ul>
             </div>
         </div>
-
         <div class="footer-bottom">
-            <div class="legal-links">
-                <p>© Neverland 2026 - Todos los derechos reservados</p>
+            <div class="footer-legal">
+                <p>&copy; Neverland 2026 - Todos los derechos reservados</p>
             </div>
-            <div class="social-icons">
-                <div class="social-links">
-                    <a href="https://wa.me/34630580676" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                    <a href="https://facebook.com/neverlandzaragoza" target="_blank" class="social-icon facebook" aria-label="Facebook">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://instagram.com/neverlandzaragoza" target="_blank" class="social-icon instagram" aria-label="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </div>
+            <div class="social-links">
+                <a href="https://wa.me/34630580676" target="_blank" class="social-icon" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://facebook.com/neverlandzaragoza" target="_blank" class="social-icon" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/neverlandzaragoza" target="_blank" class="social-icon" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
             </div>
         </div>
     </footer>
 </body>
+
 </html>

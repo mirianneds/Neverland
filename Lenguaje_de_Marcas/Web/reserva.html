@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <header class="topbar">
-        <div class="brand">
-            <img class="brand__logo" src="img/Neverland_SinFondo.png" alt="Neverland Logo" />
+    <header class="header">
+        <div class="header-brand">
+            <img class="header-logo" src="img/Neverland_SinFondo.png" alt="Neverland Logo" />
         </div>
         <nav class="nav">
             <a href="index.html">Inicio</a>
@@ -23,9 +23,10 @@
     </header>
 
     <main>
-        <section class="content-container">
+        <section class="section-intro">
             <h2>Reserva tu Evento</h2>
-            <p>¡Queremos ser parte de tu celebración! Rellena el formulario y te confirmaremos la disponibilidad lo antes posible.</p>
+            <p>¡Queremos ser parte de tu celebración! Rellena el formulario y te confirmaremos la disponibilidad lo
+                antes posible.</p>
         </section>
 
         <section class="booking-section">
@@ -43,69 +44,69 @@
                     </div>
                 </div>
 
-               <form class="booking-form">
-    <div class="form-group">
-        <label for="nombre">Nombre completo</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Ej: Maria García" required>
-    </div>
+                <form class="booking-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Maria García" required>
+                    </div>
 
-    <div class="form-group">
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" placeholder="nombre@ejemplo.com" required>
-    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+                    </div>
 
-    <div class="form-group">
-        <label for="fecha">Fecha del evento</label>
-        <input type="date" id="fecha" name="fecha" required>
-    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha del evento</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
 
-    <div class="form-group">
-        <label for="turno">Selecciona el turno</label>
-        <select id="turno" name="turno">
-            <option value="manana">Mañana (10:30 - 15:00)</option>
-            <option value="tarde">Tarde (16:30 - 21:00)</option>
-            <option value="completo">Día Completo</option>
-        </select>
-    </div>
+                    <div class="form-group">
+                        <label for="turno">Selecciona el turno</label>
+                        <select id="turno" name="turno">
+                            <option value="manana">Mañana (10:30 - 15:00)</option>
+                            <option value="tarde">Tarde (16:30 - 21:00)</option>
+                            <option value="completo">Día Completo</option>
+                        </select>
+                    </div>
 
-    <div class="form-group cleaning-option">
-        <label>¿Deseas contratar servicio de limpieza?</label>
-        <div class="radio-group">
-            <label class="radio-label">
-                <input type="radio" name="limpieza" value="si"> Sí
-            </label>
-            <label class="radio-label">
-                <input type="radio" name="limpieza" value="no" checked> No
-            </label>
-        </div>
-        <p class="cleaning-note">
-            <i class="fa-solid fa-circle-info"></i> 
-            El servicio de limpieza tiene un coste adicional de <strong>30€</strong>.
-        </p>
-    </div>
+                    <div class="form-group cleaning-option">
+                        <label>¿Deseas contratar servicio de limpieza?</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="limpieza" value="si"> Sí
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="limpieza" value="no" checked> No
+                            </label>
+                        </div>
+                        <p class="cleaning-note">
+                            <i class="fa-solid fa-circle-info"></i>
+                            El servicio de limpieza tiene un coste adicional de <strong>30€</strong>.
+                        </p>
+                    </div>
 
-    <div class="form-group">
-        <label for="mensaje">¿Alguna petición especial?</label>
-        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos cuántos invitados sois o qué necesitas..."></textarea>
-    </div>
+                    <div class="form-group">
+                        <label for="mensaje">¿Alguna petición especial?</label>
+                        <textarea id="mensaje" name="mensaje" rows="4"
+                            placeholder="Cuéntanos cuántos invitados sois o qué necesitas..."></textarea>
+                    </div>
 
-    <button type="submit" class="btn-primary">
-        <span>Enviar Solicitud</span>
-    </button>
-</form>
+                    <button type="submit" class="btn-primary">
+                        <span>Enviar Solicitud</span>
+                    </button>
+                </form>
             </div>
         </section>
     </main>
 
     <footer class="main-footer">
         <div class="footer-top">
-            <div class="footer-column brand-info">
+            <div class="footer-column footer-brand">
                 <img src="img/Neverland_SinFondo.png" alt="Neverland Logo" class="footer-logo">
                 <p>C/ de la Vía Universitaria, 10<br>50009 Zaragoza</p>
-                <p class="phone">630 580 676</p>
+                <p class="footer-phone">630 580 676</p>
             </div>
-
-            <div class="footer-column schedule">
+            <div class="footer-column footer-schedule">
                 <h3>HORARIO</h3>
                 <ul>
                     <li>Mañanas: 10:30 a 15:00</li>
@@ -114,27 +115,25 @@
                 </ul>
             </div>
         </div>
-
         <div class="footer-bottom">
-            <div class="legal-links">
+            <div class="footer-legal">
                 <p>&copy; Neverland 2026 - Todos los derechos reservados</p>
             </div>
-            <div class="social-icons">
-                <div class="social-links">
-                    <a href="https://wa.me/34123456789" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                    <a href="https://facebook.com/neverlandzaragoza" target="_blank" class="social-icon facebook" aria-label="Facebook">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://instagram.com/neverlandzaragoza" target="_blank" class="social-icon instagram" aria-label="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </div>
+            <div class="social-links">
+                <a href="https://wa.me/34630580676" target="_blank" class="social-icon" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://facebook.com/neverlandzaragoza" target="_blank" class="social-icon"
+                    aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com/neverlandzaragoza" target="_blank" class="social-icon"
+                    aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
             </div>
         </div>
     </footer>
 </body>
-</html>
-</body>
+
 </html>

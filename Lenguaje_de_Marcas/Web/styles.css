@@ -433,6 +433,225 @@ section > article:nth-child(even) {
     transform: translateY(-3px);
 }
 
+/* --- Estilos específicos para la página de Reserva --- */
+
+.booking-section {
+    padding: 40px 20px 80px;
+    background: linear-gradient(to bottom, var(--purple) 0%, var(--white) 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.booking-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.booking-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    background: var(--white);
+    padding: 20px;
+    border-radius: var(--r);
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.info-item i {
+    font-size: 2rem;
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+
+.booking-form {
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--r);
+    box-shadow: var(--shadow);
+    /* Borde degradado como tus cards */
+    border: 4px solid transparent;
+    background-image: linear-gradient(white, white), var(--gradient);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--bg-soft);
+    border-radius: 12px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--pink);
+}
+
+.booking-form .btn-primary {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- Estilos Contacto (Sin Cards) --- */
+
+/* ================================================= */
+/* ESTILOS PARA PÁGINA DE CONTACTO          */
+/* ================================================= */
+
+/* 1. Contenedor del Gradiente (El "puente" visual) */
+.gradient-bridge {
+    /* Crea la transición desde el morado de la sección superior hacia el blanco */
+    background: linear-gradient(to bottom, 
+        var(--purple) 0%, 
+        var(--purple) 50%, 
+        var(--bg-soft) 100%
+    );
+    padding: 20px 20px 100px;
+    margin-top: -105px; /* Sube el bloque para pisar el contenido superior */
+    position: relative;
+    z-index: 10;
+}
+
+/* 2. Bloque Principal de Contacto */
+.contact-simple-layout {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: var(--r);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    
+    /* Borde con el gradiente arcoíris de Neverland */
+    border: 4px solid transparent;
+    background-image: linear-gradient(white, white), var(--gradient);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+/* 3. Columna de Detalles (Texto e Iconos) */
+.contact-details {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    min-width: 320px;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center; /* Centra el icono con el texto */
+    gap: 20px;
+}
+
+.contact-row i {
+    font-size: 1.8rem;
+    color: var(--blue);
+    background: var(--bg-soft);
+    padding: 15px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Evita que el círculo se deforme */
+}
+
+.text-group h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    color: var(--text);
+    font-family: 'Nunito', sans-serif;
+}
+
+.text-group p {
+    margin: 0;
+    color: var(--text2);
+    font-size: 1.05rem;
+    line-height: 1.4;
+}
+
+/* 4. Columna del Mapa */
+.map-full {
+    flex: 1;
+    min-width: 400px;
+    min-height: 450px;
+    background: #f0f0f0; /* Color de carga */
+}
+
+/* 5. Ajustes para Dispositivos Móviles */
+@media (max-width: 768px) {
+    .gradient-bridge {
+        margin-top: -60px; /* Menos margen en móvil para que no suba tanto */
+        padding-bottom: 40px;
+    }
+
+    .contact-details {
+        padding: 30px 20px;
+    }
+
+    .map-full {
+        min-width: 100%;
+        height: 300px; /* Mapa más pequeño en móvil */
+    }
+
+    .contact-row i {
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+    }
+}
+
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .contact-details {
+        padding: 30px;
+    }
+    
+    .map-full {
+        min-width: 100%;
+        height: 300px;
+    }
+}
+
+/* Adaptación para móviles */
+@media (max-width: 768px) {
+    .booking-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .booking-info {
+        order: 2; /* Pone la info debajo del formulario en móviles */
+    }
+}
+
 @media (max-width: 768px) {
     .topbar {
         flex-direction: column;

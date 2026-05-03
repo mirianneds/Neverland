@@ -19,7 +19,7 @@ INSERT INTO Reserva (fecha_reserva, id_pago) VALUES
 ('2026-02-05', 4),
 ('2026-04-01', 5);
 
-INSERT INTO Evento (fecha_evento, turno, tipo, limpieza, id_reserva) VALUES
+INSERT INTO Evento (fecha_evento, turno, tipo, limpieza, tipo_tarifa, id_reserva) VALUES
 ('2025-12-18', 'mañana', 'cumpleaños', true, 'laborable', 1),
 ('2025-11-08', 'tarde', 'cumpleaños', true, 'festivo', 2),
 ('2026-03-23', 'tarde', 'cumpleaños', true, 'festivo', 3),

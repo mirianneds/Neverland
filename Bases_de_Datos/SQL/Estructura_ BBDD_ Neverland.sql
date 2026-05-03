@@ -29,7 +29,7 @@ CREATE TABLE Evento (
    id_evento INT PRIMARY KEY AUTO_INCREMENT,
    fecha_evento DATE NOT NULL,
    turno ENUM('mañana', 'tarde', 'día completo') NOT NULL,
-   dia_semana ENUM('laborable', 'festivo') NOT NULL,
+   tipo_tarifa ENUM('laborable', 'festivo') NOT NULL,
    tipo VARCHAR(50) NOT NULL,
    limpieza BOOLEAN NOT NULL,
    id_reserva INT UNIQUE NOT NULL,

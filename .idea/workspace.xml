@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="922e6cd8-5323-4ce1-a19f-cc0f8b334359" name="Changes" comment="estructura inicial de módulos - Proyecto Neverland">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bases_de_Datos/Diagramas/E-R_Neverland.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Bases_de_Datos/Diagramas/E-R_Neverland.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bases_de_Datos/Diagramas/Modelo-Relacional_Neverland.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Bases_de_Datos/Diagramas/Modelo-Relacional_Neverland.jpg" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mirianneds&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mirianneds/Neverland.git&quot;,
+    &quot;accountId&quot;: &quot;66a2bed2-8eee-438d-9447-aa1f361c851d&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3BNwNOvR0INiO45QeKXaybSY69d" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/DAW/DAW1_GIT/Neverland&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="922e6cd8-5323-4ce1-a19f-cc0f8b334359" name="Changes" comment="" />
+      <created>1774342794714</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774342794714</updated>
+    </task>
+    <task id="LOCAL-00001" summary="estructura inicial de módulos - Proyecto Neverland">
+      <option name="closed" value="true" />
+      <created>1774343457658</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1774343457658</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="estructura inicial de módulos - Proyecto Neverland" />
+    <option name="LAST_COMMIT_MESSAGE" value="estructura inicial de módulos - Proyecto Neverland" />
+  </component>
+</project>

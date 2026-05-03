@@ -25,14 +25,14 @@ ORDER BY fecha_evento ASC;
 
 SELECT * 
 FROM Evento
-WHERE tipo LIKE '%cumpleaños%'
+WHERE tipo LIKE '%cumpleaños%';
 
 
 -- 6.Ver pagos con datos del cliente:
 
 SELECT p.id_pago, p.importe, p.estado, c.nombre
 FROM Pago p 
-JOIN Cliente c ON p.id_cliente = c.id_cliente
+JOIN Cliente c ON p.id_cliente = c.id_cliente;
 
 
 -- 7.Ver reservas con su pago:

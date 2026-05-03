@@ -29,7 +29,11 @@ Neverland/
 │   └── Capturas/    -> Capturas de apoyo al Informe Técnico
 │
 ├── IPE/
-│   └── Perfil_Profesional.pdf
+│   ├── Capturas/   -> Capturas Web
+│   ├── Perfil_Profesional.pdf
+│   ├── Portfolio.pdf
+│   ├── Proyecto_Neverland.pdf
+│   └── Reflexion_Final.pdf
 │
 └── README.md
 ```

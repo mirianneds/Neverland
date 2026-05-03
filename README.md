@@ -16,20 +16,20 @@ Cada módulo del proyecto se encuentra organizado en su carpeta correspondiente.
 Neverland/
 │
 ├── Bases_de_Datos/
-│   ├── diagramas/ - Modelo Relacional y Entidad Relación
-│   ├── sql/ - Scripts SQL 
+│   ├── diagramas/   -> Modelo-Relacional y Entidad Relación
+│   ├── sql/    -> Scripts SQL 
 │   └── README_Bases_de_Datos.md
 │
 ├── Lenguajes_de_Marcas/
-│   ├── web/ - Archivos HTML, CSS y carpeta img.
+│   ├── web/    -> Archivos HTML, CSS y carpeta img.
 │   └── README_Lenguajes_de_marcas.md
 |
 ├── Sistemas_Informaticos/
 │   ├── Informe_tecnico_Neverland.md
-│   └── Capturas/
+│   └── Capturas/    -> Capturas de apoyo al Informe Técnico
 │
 ├── IPE/
-│   └── Perfil_Profesional_Mirianne_dos_Santos_Martins.pdf
+│   └── Perfil_Profesional.pdf
 │
 └── README.md
 ```
